@@ -16,7 +16,7 @@
 </div>
 <!--End Loading Image -->
 
-<!--Loading Image for email sent-->
+<!--Loading popup for email sent-->
 <div id="emailSentPopup" *ngIf="isEmailSent" class="LockOn"
      style="display: flex;justify-content: center; align-items: center;">
   <div style="background-color:white;text-align:center; padding:15px;">
@@ -25,11 +25,11 @@
 
     <div>
       <br/>
-      <button type="submit" class="btn btn-light" (click)="sendEmailFor(email)">Ok</button>
+      <button type="submit" class="btn btn-light" (click)="refresh()">Ok</button>
     </div>
   </div>
 </div>
-<!--End Loading Image for email sent-->
+<!--End popup for email sent-->
 
 <div class="container-fluid" style="padding: 0% 5%">
   <div>
@@ -55,10 +55,11 @@
   <h3 style="text-align: center">Yell CRM Fulfilment Application</h3>
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#"><b>Create Account</b></a>
+      <a class="nav-link active" href="#" ><b>Create Account</b></a>
     </li>
   </ul>
   <div class="row">
+    <!--Box 1-->
     <div style="padding:2rem;" class="col">
       <div style="padding-bottom:10px;"><img height="25px" width="20px" src="/src/assets/Picture1.png"/> Enter Customer Information to create CRM account and prepare email</div>
       <form [formGroup]="fullFillmentForm" (ngSubmit)="onFormSubmit()">
@@ -127,12 +128,11 @@
 
         <button type="submit" [disabled]="showPreview" class="btn btn-light">Create CRM</button>
 
-        <!--<div *ngIf="!isEmailBodyGenerated" style="color:blue">Request is being processed ..</div>-->
-        <!--<div *ngIf="isEmailBodyGenerated && statusCode==200">Process completed , Please check your email.</div>-->
-        <!--{{ statusCode }}-->
-
       </form>
     </div>
+    <!--end Box 1-->
+
+    <!--Box 2-->
     <div style="padding:2rem" class="col">
       <!--<textarea ng-model="myTextarea" ></textarea>-->
       <div style="padding-bottom:10px;"> <img height="25px" width="20px" src="/src/assets/Picture2.png"/> Review email and click to send email with access credentials to the customer
@@ -148,6 +148,8 @@
         </button>
       </div>
     </div>
+    <!--end Box 2-->
+
   </div>
 </div>
 

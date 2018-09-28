@@ -34,7 +34,6 @@ export class AdminComponent implements OnInit {
       emailBody: new FormControl()
    });
 
-   //Create constructor to get service instance
    constructor(private adminService: AdminService) {
    }
 
@@ -46,7 +45,7 @@ export class AdminComponent implements OnInit {
     let fullFillmentFormPost = this.fullFillmentForm.value;
 
 
-   //call service class to http post
+   //start call to CF stack
    this.adminService.initiateCFrequest(fullFillmentFormPost)
 			  .subscribe(res => {
           this.email = res;
@@ -56,6 +55,7 @@ export class AdminComponent implements OnInit {
           this.isEmailBodyGenerated = true;
   			 });
 		}
+    //end call to CF stack
 
     //start call to email
     sendEmailFor(email:String){
@@ -69,7 +69,7 @@ export class AdminComponent implements OnInit {
               this.adminService.sendEmailFor(postEmailData)
               .subscribe(successCode => {
                 this.emailStatusCode = successCode;
-                if(this.emailStatusCode = "200"){
+                if(this.emailStatusCode = 200){
                     this.isEmailSent = true;
                 }
 
@@ -78,5 +78,10 @@ export class AdminComponent implements OnInit {
         //end subscribe
     }
     //end-start call to email
+
+
+    refresh(){
+      window.location.reload();
+    }
 
 } //end of class
