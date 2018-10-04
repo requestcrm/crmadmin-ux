@@ -9,8 +9,8 @@ import { Fullfillmentbean } from './fullfillmentbean';
 @Injectable()
 export class AdminService {
 
-  postUrl = "http://54.242.101.181:2001/invokeTheCFStack";
-  emailUrl = "http://54.242.101.181:2001/sendEmailFor";
+  postUrl = "http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/invokeTheCFStack";
+  emailUrl = "http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/sendEmailFor";
 
   constructor(private http:Http) {
 	}
