@@ -44,3 +44,10 @@
   content:"*";
   color:red;
 }
+
+.yellowBorder{
+border:0px 0px 0px 3px;
+   border-left: 1px;
+   border-bottom-color: #ffd100;
+   border-bottom-style: solid;
+}
