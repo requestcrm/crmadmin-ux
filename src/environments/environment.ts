@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  cfpostUrl = 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/invokeTheCFStack',
+  emailUrl = 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/sendEmailFor',
 };
 
 /*

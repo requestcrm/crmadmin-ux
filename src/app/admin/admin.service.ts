@@ -3,14 +3,15 @@ import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angul
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { environment } from '../../environments/environment';
 
 import { Fullfillmentbean } from './fullfillmentbean';
 
 @Injectable()
 export class AdminService {
 
-  postUrl = "http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/invokeTheCFStack";
-  emailUrl = "http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/sendEmailFor";
+  postUrl  =  environment.cfpostUrl;
+  emailUrl =  environment.emailUrl;
 
   constructor(private http:Http) {
 	}
