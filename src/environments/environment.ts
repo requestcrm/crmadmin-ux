@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  cfpostUrl = 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/invokeTheCFStack',
-  emailUrl = 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/sendEmailFor',
+  cfpostUrl : 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/invokeTheCFStack',
+  emailUrl : 'http://ec2-54-242-101-181.compute-1.amazonaws.com:2001/sendEmailFor',
 };
 
 /*
